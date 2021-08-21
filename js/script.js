@@ -80,7 +80,7 @@ function discountNewTotal() {
 
 
     //Checking if the promo code is correct
-    if (userInput == 'stevekaku' || (document.getElementById('discount-btn').disabled == true)) {
+    if (userInput == 'saalim123' || (document.getElementById('discount-btn').disabled == true)) {
         //Calculating new total price and rounding it to 2 decimal place
         const newTotalPrice = (((totalPriceValue / 100) * 80)).toFixed(2);
         bottomTotalPrice.innerText = newTotalPrice;
