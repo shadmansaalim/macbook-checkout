@@ -105,3 +105,9 @@ function discountNewTotal() {
     //Clearing Promo Code Box Input Field
     userInputField.value = '';
 }
+
+
+function payNow() {
+    window.location.href = 'pay.html';
+}
+

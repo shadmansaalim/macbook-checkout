@@ -137,7 +137,13 @@
     <!-- New Total After any discount applied -->
     <footer>
         <hr>
-        <h2 class="fw-bold text-center">Total Price: $<span id="bottom-total-price">1299</span></h2>
+        <div class="d-flex align-items-center justify-content-center">
+            <h2 class="fw-bold text-center me-3" style="margin-bottom: 0px;">Total Price: $<span
+                    id="bottom-total-price">1299</span></h2>
+            <button class="btn btn-outline-dark" onclick="payNow()">Pay Now <i class="fs-4 fab fa-apple"></i></button>
+        </div>
+
+
         <p class="text-center text-muted" style="margin-bottom: 0px;"><small>Copyright <i class="far fa-copyright"></i>
                 Website
                 developed by Saalim Shadman, A
