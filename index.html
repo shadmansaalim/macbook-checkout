@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/3f16fb12e4.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="container mx-auto row d-flex justify-content-around">
+    <!-- Image Section -->
+    <header class="col-md-4 mt-5">
+        <img class="img-fluid" src="images/mac.png" alt="">
+    </header>
+    <!-- Site Content Section -->
+    <main class="col-md-6 mt-5">
+        <!-- Product Header Description -->
+        <section class="mb-5">
+            <h1>
+                Customize your Blue 24-inch iMac with <span class="text-info">Apple M1 chip</span>
+            </h1>
+            <p class="text-muted">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core
+                GPU, and 16-core
+                Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic
+                Keyboard - US English.
+
+        </section>
+        <section>
+            <!-- Memory Section -->
+            <section class="memory-section">
+                <h6 class="fw-bold">Memory</h6>
+
+                <!-- Memory Button Groups 8gb and 16gb -->
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio1" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-info me-3" for="btnradio1" onclick="updateCost('memory', 8)">8GB
+                        unified memory</label>
+
+                    <input type="radio" class="btn-check" name="btnradio1" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-info me-3" for="btnradio2" onclick="updateCost('memory', 16)">16GB
+                        unified memory</label>
+
+                </div>
+            </section>
+            <!-- Storage Section -->
+            <section class="storage-section my-5">
+                <h6 class="fw-bold">Storage</h6>
+
+                <!-- Storage Button Groups 256gb, 512gb and 1TB. -->
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group2">
+                    <input type="radio" class="btn-check" name="btnradio2" id="btnradio3" autocomplete="off" checked>
+                    <label class="btn btn-outline-info me-3" for="btnradio3" onclick="updateCost('storage', 256)">256GB
+                        SSD
+                        storage</label>
+
+                    <input type="radio" class="btn-check" name="btnradio2" id="btnradio4" autocomplete="off">
+                    <label class="btn btn-outline-info me-3" for="btnradio4" onclick="updateCost('storage', 512)">512GB
+                        SSD storage</label>
+
+                    <input type="radio" class="btn-check" name="btnradio2" id="btnradio5" autocomplete="off">
+                    <label class="btn btn-outline-info me-3" for="btnradio5" onclick="updateCost('storage', 1)">1TB
+                        SSD storage</label>
+
+                </div>
+            </section>
+            <!-- Delivery Option Section -->
+            <section class="delivery-option-section my-5">
+                <h6 class="fw-bold">Choose your delivery option</h6>
+
+                <!-- Delivery option Button Groups Free and Charged -->
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group3">
+                    <input type="radio" class="btn-check" name="btnradio3" id="btnradio6" autocomplete="off" checked>
+                    <label class="btn btn-outline-info me-3" for="btnradio6"
+                        onclick="updateCost('delivery', 0)">Friday,Aug 25 FREE Prime
+                        Delivery</label>
+
+                    <input type="radio" class="btn-check" name="btnradio3" id="btnradio7" autocomplete="off">
+                    <label class="btn btn-outline-info me-3" for="btnradio7"
+                        onclick="updateCost('delivery', 20)">Friday,Aug 21 Delivery Charge
+                        $20</label>
+
+                </div>
+            </section>
+
+            <!-- Checkout Section -->
+            <section class="w-50">
+                <div class="d-flex row">
+                    <h6 class="fw-bold col-md-8">Best Price</h6>
+                    <h6 class="fw-bold col-md-4">$<span id="best-price">1299</span></h6>
+                </div>
+                <hr>
+                <div class="d-flex row">
+                    <h6 class="fw-bold col-md-8">Extra Memory Cost</h6>
+                    <h6 class="fw-bold col-md-4">$<span id="memory-cost">0</span></h6>
+                </div>
+                <hr>
+                <div class="d-flex row">
+                    <h6 class="fw-bold col-md-8">Extra Storage Cost</h6>
+                    <h6 class="fw-bold col-md-4">$<span id="storage-cost">0</span></h6>
+                </div>
+                <hr>
+                <div class="d-flex row">
+                    <h6 class="fw-bold col-md-8">Delivery Charge</h6>
+                    <h6 class="fw-bold col-md-4">$<span id="delivery-cost">0</span></h6>
+                </div>
+                <div class="bg-dark">
+                    <hr style="height: 3px;">
+                </div>
+                <div class="d-flex row mt-3">
+                    <h6 class="fw-bold col-md-8">Total Price</h6>
+                    <h6 class="fw-bold col-md-4">$<span id="total-price">1299</span></h6>
+                </div>
+                <hr>
+
+                <div class="mt-4 mb-2">
+                    <h6>Add Promo Code</h6>
+                    <div class="d-flex ">
+                        <input id="discount-code-input" type="text" class="me-1">
+                        <button id="discount-btn" class="btn btn-danger text-white"
+                            onclick="discountNewTotal()">Apply</button>
+                    </div>
+                    <p class="mt-2" id="promo-message"></p>
+                </div>
+            </section>
+
+        </section>
+    </main>
+    <!-- New Total After any discount applied -->
+    <footer class="mb-2">
+        <hr>
+        <h2 class="fw-bold text-center">Total: $<span id="bottom-total-price">1299</span></h2>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap5 Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
