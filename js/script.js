@@ -111,3 +111,6 @@ function payNow() {
     window.location.href = 'pay.html';
 }
 
+function previousPage() {
+    window.location.href = 'index.html';
+}
