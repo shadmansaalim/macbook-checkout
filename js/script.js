@@ -107,10 +107,12 @@ function discountNewTotal() {
 }
 
 
+//Redirecting to payment page if clicked on Pay Now
 function payNow() {
     window.location.href = 'pay.html';
 }
 
+//Redirecting to previous page if clicked on Previous
 function previousPage() {
     window.location.href = 'index.html';
 }
