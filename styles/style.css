@@ -33,11 +33,10 @@ hr{
     width: 177px;
 }    
 
-
-
-
-
-
-
-
+/* Giving the colors to unclicked buttons */
+.btn-outline-info{
+    background-color:whitesmoke;
+    color:black;
+    border-color: black;
+}
 
